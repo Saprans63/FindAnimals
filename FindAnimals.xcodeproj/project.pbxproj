@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		96AA28E5278D56F9005CEE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AA28E3278D56F9005CEE16 /* Main.storyboard */; };
 		96AA28E7278D5700005CEE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AA28E6278D5700005CEE16 /* Assets.xcassets */; };
 		96AA28EA278D5700005CEE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AA28E8278D5700005CEE16 /* LaunchScreen.storyboard */; };
+		96AA28F3278D5731005CEE16 /* PicturesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA28F2278D5731005CEE16 /* PicturesController.swift */; };
+		96AA28F5278D573E005CEE16 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA28F4278D573E005CEE16 /* QuizController.swift */; };
+		96AA28F7278D5749005CEE16 /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AA28F6278D5749005CEE16 /* AnimalData.swift */; };
+		FFBB274EFAC570BF02409A45 /* Pods_FindAnimals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C6A4AF6B3CE5885ADC44B0 /* Pods_FindAnimals.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DD283B63FF1D431B3BC9A4C /* Pods-FindAnimals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindAnimals.release.xcconfig"; path = "Target Support Files/Pods-FindAnimals/Pods-FindAnimals.release.xcconfig"; sourceTree = "<group>"; };
+		104A98AF1A19D4AE4FB515EE /* Pods-FindAnimals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindAnimals.debug.xcconfig"; path = "Target Support Files/Pods-FindAnimals/Pods-FindAnimals.debug.xcconfig"; sourceTree = "<group>"; };
+		45C6A4AF6B3CE5885ADC44B0 /* Pods_FindAnimals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindAnimals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AA28DA278D56F9005CEE16 /* FindAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AA28DD278D56F9005CEE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96AA28DF278D56F9005CEE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		96AA28E6278D5700005CEE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96AA28E9278D5700005CEE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96AA28EB278D5700005CEE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96AA28F2278D5731005CEE16 /* PicturesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesController.swift; sourceTree = "<group>"; };
+		96AA28F4278D573E005CEE16 /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		96AA28F6278D5749005CEE16 /* AnimalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBB274EFAC570BF02409A45 /* Pods_FindAnimals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66FA868EE9AE68928E3B0DD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45C6A4AF6B3CE5885ADC44B0 /* Pods_FindAnimals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96AA28D1278D56F9005CEE16 = {
 			isa = PBXGroup;
 			children = (
 				96AA28DC278D56F9005CEE16 /* FindAnimals */,
 				96AA28DB278D56F9005CEE16 /* Products */,
+				D7F57D5672F8F16FAB1BD4AF /* Pods */,
+				66FA868EE9AE68928E3B0DD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,35 @@
 		96AA28DC278D56F9005CEE16 /* FindAnimals */ = {
 			isa = PBXGroup;
 			children = (
+				96AA28F1278D570C005CEE16 /* Group */,
 				96AA28DD278D56F9005CEE16 /* AppDelegate.swift */,
 				96AA28DF278D56F9005CEE16 /* SceneDelegate.swift */,
-				96AA28E1278D56F9005CEE16 /* ViewController.swift */,
 				96AA28E3278D56F9005CEE16 /* Main.storyboard */,
 				96AA28E6278D5700005CEE16 /* Assets.xcassets */,
 				96AA28E8278D5700005CEE16 /* LaunchScreen.storyboard */,
 				96AA28EB278D5700005CEE16 /* Info.plist */,
 			);
 			path = FindAnimals;
+			sourceTree = "<group>";
+		};
+		96AA28F1278D570C005CEE16 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				96AA28F2278D5731005CEE16 /* PicturesController.swift */,
+				96AA28F6278D5749005CEE16 /* AnimalData.swift */,
+				96AA28F4278D573E005CEE16 /* QuizController.swift */,
+				96AA28E1278D56F9005CEE16 /* ViewController.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		D7F57D5672F8F16FAB1BD4AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				104A98AF1A19D4AE4FB515EE /* Pods-FindAnimals.debug.xcconfig */,
+				0DD283B63FF1D431B3BC9A4C /* Pods-FindAnimals.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96AA28EE278D5700005CEE16 /* Build configuration list for PBXNativeTarget "FindAnimals" */;
 			buildPhases = (
+				337B9D653F235B29E8C5BA88 /* [CP] Check Pods Manifest.lock */,
 				96AA28D6278D56F9005CEE16 /* Sources */,
 				96AA28D7278D56F9005CEE16 /* Frameworks */,
 				96AA28D8278D56F9005CEE16 /* Resources */,
+				1348D8FF13BE594E4A8E8F51 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +175,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1348D8FF13BE594E4A8E8F51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindAnimals/Pods-FindAnimals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindAnimals/Pods-FindAnimals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindAnimals/Pods-FindAnimals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		337B9D653F235B29E8C5BA88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindAnimals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96AA28D6278D56F9005CEE16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				96AA28E2278D56F9005CEE16 /* ViewController.swift in Sources */,
+				96AA28F7278D5749005CEE16 /* AnimalData.swift in Sources */,
 				96AA28DE278D56F9005CEE16 /* AppDelegate.swift in Sources */,
+				96AA28F5278D573E005CEE16 /* QuizController.swift in Sources */,
+				96AA28F3278D5731005CEE16 /* PicturesController.swift in Sources */,
 				96AA28E0278D56F9005CEE16 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +371,7 @@
 		};
 		96AA28EF278D5700005CEE16 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104A98AF1A19D4AE4FB515EE /* Pods-FindAnimals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +390,7 @@
 		};
 		96AA28F0278D5700005CEE16 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DD283B63FF1D431B3BC9A4C /* Pods-FindAnimals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
